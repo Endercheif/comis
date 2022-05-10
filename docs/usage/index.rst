@@ -37,7 +37,7 @@ Creating a bot with comis is simple.
             username="USERNAME",
             password="PASSWORD",
             subreddits=["your_subreddit"],
-        ).
+        )
 
         bot.run()
 
