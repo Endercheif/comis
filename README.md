@@ -1,6 +1,7 @@
 
-[![Supported Python Versions](https://img.shields.io/pypi/pyversions/comis)](https://pypi.python.org/pypi/comis) [![PyPI version](https://badge.fury.io/py/comis.svg)](https://badge.fury.io/py/comis)
-
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/comis)](https://pypi.python.org/pypi/comis)
+[![PyPI version](https://badge.fury.io/py/comis.svg)](https://badge.fury.io/py/comis)
+[![Documentation Status](https://readthedocs.org/projects/comis/badge/?version=latest)](https://comis.readthedocs.io/en/latest/?badge=latest)
 
 # comis #
 *The simplest way to create a Reddit bot*
