@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Examples &#8212; comis 0.1.0 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API Documentation" href="../api/index.html" />
+    <link rel="prev" title="Quickstart" href="../usage/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">comis</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../usage/index.html">
+  Quickstart
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api/index.html">
+  API Documentation
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#automatic-comment">
+   Automatic Comment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bad-word-filter">
+   Bad Word Filter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monday-filter">
+   Monday Filter
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h1>
+<p>Here are some examples of some bots that can be created using comis.
+All of these bot examples will need to be instantiated and called with <code class="docutils literal notranslate"><span class="pre">run()</span></code>.
+See the <a class="reference internal" href="../usage/index.html"><span class="doc">Quickstart Guide</span></a> for more details.</p>
+<section id="automatic-comment">
+<h2>Automatic Comment<a class="headerlink" href="#automatic-comment" title="Permalink to this headline">#</a></h2>
+<p>Comment on posts in a subreddit automatically also pin and distinguish them.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">comis</span> <span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">submission</span>
+
+
+<span class="k">class</span> <span class="nc">MyBot</span><span class="p">(</span><span class="n">Client</span><span class="p">):</span>
+    <span class="nd">@submission</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">auto_comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">mod</span><span class="p">):</span>
+        <span class="n">reply</span> <span class="o">=</span> <span class="k">await</span> <span class="n">content</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span>
+            <span class="s2">&quot;Beep boop, this is an automated message &quot;</span>
+            <span class="s2">&quot;from the mods to remember to follow the rules.&quot;</span>
+        <span class="p">)</span>
+        <span class="k">await</span> <span class="n">reply</span><span class="o">.</span><span class="n">distinguish</span><span class="p">(</span><span class="n">sticky</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="bad-word-filter">
+<h2>Bad Word Filter<a class="headerlink" href="#bad-word-filter" title="Permalink to this headline">#</a></h2>
+<p>Remove comments that contain bad words.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">re</span> <span class="kn">import</span> <span class="nb">compile</span>
+
+<span class="kn">from</span> <span class="nn">comis</span> <span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">comment</span>
+<span class="kn">from</span> <span class="nn">comis.filters</span> <span class="kn">import</span> <span class="n">flair</span>
+
+<span class="n">no_no_words</span> <span class="o">=</span> <span class="nb">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(darn)|(heck)&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">MyBot</span><span class="p">(</span><span class="n">Client</span><span class="p">):</span>
+    <span class="nd">@flair</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">no_no_words</span><span class="p">)</span>
+    <span class="nd">@comment</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">filter_bad_words</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">mod</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">mod</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Bad word detected&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">mod</span><span class="o">.</span><span class="n">send_removal_message</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Your [comment](</span><span class="si">{</span><span class="n">content</span><span class="o">.</span><span class="n">permalink</span><span class="si">}</span><span class="s2">) has &quot;</span>
+            <span class="s2">&quot;been removed because it contains a bad word.&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Comment Removed&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="monday-filter">
+<h2>Monday Filter<a class="headerlink" href="#monday-filter" title="Permalink to this headline">#</a></h2>
+<p>Remove all memes posted on Monday unless they are posted by a moderator or an admin.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">re</span> <span class="kn">import</span> <span class="nb">compile</span>
+
+<span class="kn">from</span> <span class="nn">comis</span> <span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">submission</span>
+<span class="kn">from</span> <span class="nn">comis.filters</span> <span class="kn">import</span> <span class="n">Day</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">flair</span><span class="p">,</span> <span class="n">time</span>
+
+
+<span class="k">class</span> <span class="nc">MyBot</span><span class="p">(</span><span class="n">Client</span><span class="p">):</span>
+    <span class="nd">@flair</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nb">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\[MEME]&quot;</span><span class="p">))</span>
+    <span class="nd">@time</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="p">[</span><span class="n">Day</span><span class="o">.</span><span class="n">monday</span><span class="p">])</span>
+    <span class="nd">@author</span><span class="p">(</span><span class="n">mod</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">admin</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nd">@submission</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">monday_filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">mod</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">mod</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">mod_note</span><span class="o">=</span><span class="s2">&quot;Meme filter&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">mod</span><span class="o">.</span><span class="n">send_removal_message</span><span class="p">(</span>
+            <span class="s2">&quot;Your post has been removed automatically:</span><span class="se">\n</span><span class="s2">   &quot;</span>
+            <span class="s2">&quot;Memes are not allowed on Monday.&quot;</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../usage/index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Quickstart</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../api/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">API Documentation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, endercheif.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

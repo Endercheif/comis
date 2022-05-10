@@ -1,5 +1,5 @@
 from comis import check
-from comis.utils import content_type
+from comis.utils import ContentType
 
 
 def karma_gt(
@@ -13,6 +13,7 @@ def karma_gt(
 ):
     """
     Filter posts by type of karma greater than the given value.
+
     Parameters
     ----------
     total :
@@ -30,7 +31,7 @@ def karma_gt(
 
     """
 
-    async def predicate(content: content_type, _):
+    async def predicate(content: ContentType, _):
         author = content.author
         await author.load()
 

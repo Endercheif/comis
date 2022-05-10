@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from comis import check
-from comis.utils import content_type
+from comis.utils import ContentType
 
 
 def author(
@@ -18,6 +18,20 @@ def author(
 ):
     """
     Filter posts by author attributes.
+
+    Examples
+    --------
+
+    .. code-block:: python
+
+        from comis import Client, submission
+        from comis.filters import author
+
+        class MyClient(Client):
+            @author(mod=False, premium=False)
+            @submission()
+            async def stuff(self, content, mod):
+                await mod.remove()
 
     Parameters
     ----------
@@ -44,7 +58,7 @@ def author(
 
     """
 
-    async def predicate(content: content_type, _):
+    async def predicate(content: ContentType, _):
         a = content.author
 
         if name is not None and a.name != name:
