@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "comis"
-version = "0.1.0"
+version = "0.1.1"
 description = "comis, the simplest way to create a reddit bot"
 authors = ["Endercheif"]
 packages = [{ "include" = "comis" }]
+readme = "README.md"
+documentation = "https://comis.readthedocs.io/en/latest"
+repository = "https://github.com/Endercheif/comis"
 
 
 [tool.poetry.dependencies]
