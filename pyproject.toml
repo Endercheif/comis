@@ -5,8 +5,9 @@ description = "comis, the simplest way to create a reddit bot"
 authors = ["Endercheif"]
 packages = [{ "include" = "comis" }]
 
+
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 PyYAML = "^6.0"
 asyncpraw = "^7.5.0"
 Sphinx = {version = "^4.5.0", optional = true}
