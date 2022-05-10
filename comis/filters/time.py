@@ -2,19 +2,19 @@ from datetime import datetime
 from enum import IntEnum
 
 from .. import check
-from ..utils import content_type
+from ..utils import ContentType
 
 
 class Day(IntEnum):
     """Enum for days of the week."""
 
-    monday = 1
-    tuesday = 2
-    wednesday = 3
-    thursday = 4
-    friday = 5
-    saturday = 6
-    sunday = 7
+    monday = 1  #:
+    tuesday = 2  #:
+    wednesday = 3  #:
+    thursday = 4  #:
+    friday = 5  #:
+    saturday = 6  #:
+    sunday = 7  #:
 
 
 def time(days: list[Day] = None):
@@ -27,7 +27,7 @@ def time(days: list[Day] = None):
         Valid days of the week.
     """
 
-    async def wrapper(content: content_type, __):
+    async def wrapper(content: ContentType, __):
         d = datetime.utcfromtimestamp(content.created_utc).isoweekday()
         if days is not None:
             if d not in days:
